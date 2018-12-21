@@ -1,29 +1,39 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Random Vine Generator</title>
 </head>
 <body style="background-color:#00bf8e;">
 	<p align="center">
-    <video loop playsinline width= "700"
-    height = "700" autoplay="autoplay">
+    <video id="player" loop playsinline width= "700"
+    height = "700" preload="auto" autoplay="autoplay">
       <source id="vsrc" />
     </video>
 	</p>
     <div>
 	<p align="center">
-	<button style="height:200px;width:400px" onClick="window.location.reload(true)">Random Vine</button>
+	<button id="play" style="height:200px;width:400px" onClick="window.location.reload(true)">Random Vine</button>
 	</p>
 	</div>
   <script>
     document.getElementById("vsrc").src = Math.floor((Math.random()*17)) + ".mp4";
   </script>
-  <script>
+<!--   <script>
 function startVideo(){
 var pElement3 = document.getElementById('vsrc');
 pElement3.play();
 }
-</script>
-<p>h</p>
+</script> -->
+<script type="text/javascript">
+			window.onload = function(){
+				var player = document.getElementById("player");
+				var play = document.getElementById("play");
+				play.addEventListener("click",function(){
+					player.play();
+				});
+			}
+		</script>
+<p>p</p>
 </body>
 </html>

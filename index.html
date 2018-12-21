@@ -4,6 +4,18 @@
 	<title>Hello!</title>
 </head>
 <body>
-<p>This is alive test!</p>
+<div id = "vid">
+    <video width = "320"
+    height = "240"
+    controls autoplay="1">
+      <source id="vsrc" />
+      Please update your browser.
+    </video>
+  </div>
+	<button onClick="history.go(0)">Random Vine</button>
+
+  <script>
+    document.getElementById("vsrc").src = Math.floor((Math.random()*3)+1) + ".mp4";
+  </script>
 </body>
 </html>

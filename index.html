@@ -10,10 +10,10 @@
       <source id="vsrc" />
       Please update your browser.
     </video>
-	<button onClick="history.go(0)">Random Vine</button>
+	<button onClick="window.location.reload(true)">Random Vine</button>
 
   <script>
-    document.getElementById("vsrc").src = Math.floor((Math.random()*3)+1) + ".mp4";
+    document.getElementById("vsrc").src = Math.floor((Math.random()*17) + 1) + ".mp4";
   </script>
 </body>
 </html>

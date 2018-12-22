@@ -5,10 +5,17 @@
 </head>
 <body style="background-color:#00bf8e;">
 	<p align="center">
-    <video loop playsinline width= "700"
+	<videogular id="intro-video" vg-width="config.width" 
+	 vg-height="config.height" 
+	 vg-theme="config.theme.url" 
+	vg-autoplay="config.autoPlay" 
+	 vg-stretch="config.stretch.value" 
+	 vg-responsive="true">
+    <video class="videoPlayer" loop webkit-playsinline width= "700"
     height = "700" autoplay="autoplay">
       <source id="vsrc" />
     </video>
+    </videogular>
 	</p>
     <div>
 	<p align="center">
@@ -33,5 +40,24 @@ pElement3.play();
 				});
 			}
 		</script> -->
+		<script>
+		angular.module('starter', [
+                        'ionic', 
+                        'starter.controllers', 
+                        'starter.services',
+                        "com.2fdevs.videogular",
+                        "com.2fdevs.videogular.plugins.controls",
+                        "com.2fdevs.videogular.plugins.overlayplay",
+                        "com.2fdevs.videogular.plugins.buffering",
+                        "com.2fdevs.videogular.plugins.poster"
+                        ])
+
+.run(function($ionicPlatform) {
+$ionicPlatform.ready(function() {
+   // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
+   // for form inputs)
+});
+})
+</script>
 </body>
 </html>
